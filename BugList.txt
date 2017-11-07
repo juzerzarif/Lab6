@@ -1,0 +1,8 @@
+
++ isEmpty() always returns true, even on populated lists
+
++ addBack() adds to the front of the list instead of the back
+
++ removeBack() method does not remove the element from the list
+
++ removeFront() method does not remove the element from the list
