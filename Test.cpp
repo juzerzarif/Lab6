@@ -199,18 +199,18 @@ bool Test::addBackTest()
     {
         if(array[i] != listVector.at(i))
         {
-            cout<<"Expected List:"<<endl;
+            cout<<"\nExpected List:"<<endl;
             for(int i=0; i<listSize; i++)
             {
                 cout<<array[i]<<", ";
             }
             cout<<"\nActual List:"<<endl;
-            for(int i=0; i<listVector.size(); i++)
+            for(unsigned int i=0; i<listVector.size(); i++)
             {
                 cout<<listVector.at(i)<<", ";
             }
-            cout<<endl;
-            cout<<"Linked List addBack unsuccessful for index: "<<i<<endl;
+            cout<<endl<<endl;
+            
             return false;
         }
     }
@@ -234,18 +234,18 @@ bool Test::addFrontTest()
     {
         if(array[i] != listVector.at(i))
         {
-            cout<<"Expected List:"<<endl;
+            cout<<"\nExpected List:"<<endl;
             for(int i=0; i<listSize; i++)
             {
                 cout<<array[i]<<", ";
             }
             cout<<"\nActual List:"<<endl;
-            for(int i=0; i<listVector.size(); i++)
+            for(unsigned int i=0; i<listVector.size(); i++)
             {
                 cout<<listVector.at(i)<<", ";
             }
-            cout<<endl;
-            cout<<"Linked List addFront unsuccessful for index: "<<i<<endl;
+            cout<<endl<<endl;
+            
             return false;
         }
     }
@@ -269,35 +269,35 @@ bool Test::removeBackTest()
 
     if(listVector.size() != checkVector.size())
     {
-        cout<<"Expected List:"<<endl;
-        for(int i=0; i<checkVector.size(); i++)
+        cout<<"\nExpected List:"<<endl;
+        for(unsigned int i=0; i<checkVector.size(); i++)
         {
             cout<<checkVector.at(i)<<", ";
         }
         cout<<"\nActual List:"<<endl;
-        for(int i=0; i<listVector.size(); i++)
+        for(unsigned int i=0; i<listVector.size(); i++)
         {
             cout<<listVector.at(i)<<", ";
         }
-        cout<<endl;
+        cout<<endl<<endl;
         return false;
     }
-    for(int i=0; i<listVector.size(); i++)
+    for(unsigned int i=0; i<listVector.size(); i++)
     {
         if(checkVector.at(i) != listVector.at(i))
         {
-            cout<<"Expected List:"<<endl;
-            for(int i=0; i<checkVector.size(); i++)
+            cout<<"\nExpected List:"<<endl;
+            for(unsigned int i=0; i<checkVector.size(); i++)
             {
                 cout<<checkVector.at(i)<<", ";
             }
             cout<<"\nActual List:"<<endl;
-            for(int i=0; i<listVector.size(); i++)
+            for(unsigned int i=0; i<listVector.size(); i++)
             {
                 cout<<listVector.at(i)<<", ";
             }
-            cout<<endl;
-            cout<<"Linked List removeBack unsuccessful for index: "<<i<<endl;
+            cout<<endl<<endl;
+            
             return false;
         }
     }
@@ -321,35 +321,35 @@ bool Test::removeFrontTest()
 
     if(listVector.size() != checkVector.size())
     {
-        cout<<"Expected List:"<<endl;
-        for(int i=0; i<checkVector.size(); i++)
+        cout<<"\nExpected List:"<<endl;
+        for(unsigned int i=0; i<checkVector.size(); i++)
         {
             cout<<checkVector.at(i)<<", ";
         }
         cout<<"\nActual List:"<<endl;
-        for(int i=0; i<listVector.size(); i++)
+        for(unsigned int i=0; i<listVector.size(); i++)
         {
             cout<<listVector.at(i)<<", ";
         }
-        cout<<endl;
+        cout<<endl<<endl;
         return false;
     }
-    for(int i=0; i<listVector.size(); i++)
+    for(unsigned int i=0; i<listVector.size(); i++)
     {
         if(checkVector.at(i) != listVector.at(i))
         {
-            cout<<"Expected List:"<<endl;
-            for(int i=0; i<checkVector.size(); i++)
+            cout<<"\nExpected List:"<<endl;
+            for(unsigned int i=0; i<checkVector.size(); i++)
             {
                 cout<<checkVector.at(i)<<", ";
             }
             cout<<"\nActual List:"<<endl;
-            for(int i=0; i<listVector.size(); i++)
+            for(unsigned int i=0; i<listVector.size(); i++)
             {
                 cout<<listVector.at(i)<<", ";
             }
-            cout<<endl;
-            cout<<"Linked List removeFront unsuccessful for index: "<<i<<endl;
+            cout<<endl<<endl;
+            
             return false;
         }
     }
@@ -381,26 +381,45 @@ bool Test::emptyRemoveFrontTest()
 void Test::run()
 {
     cout<<"RUNNING TESTS..."<<endl<<endl<<endl;
-    cout<<"Test 1: \nisEmpty returns true on empty list: "<<(emptyListCheckTest()? "PASSED":"FAILED")<<endl;
-    cout<<"Test 2: \nisEmpty returns false on populated list: "<<(populatedListCheckTest()? "PASSED":"FAILED")<<endl;
-    cout<<"Test 3: \nsize returns 0 on empty list: "<<(emptySizeTest()? "PASSED":"FAILED")<<endl;
-    cout<<"Test 4: \nsize returns correct size after single addBack: "<<(singleAddBackSizeTest()? "PASSED":"FAILED")<<endl;
-    cout<<"Test 5: \nsize returns correct size after multiple addBack: "<<(addBackSizeTest()? "PASSED":"FAILED")<<endl;
-    cout<<"Test 6: \nsize returns correct size after single addFront: "<<(singleAddFrontSizeTest()? "PASSED":"FAILED")<<endl;
-    cout<<"Test 7: \nsize returns correct size after multiple addFront: "<<(addFrontSizeTest()? "PASSED":"FAILED")<<endl;
-    cout<<"Test 8: \nsize returns correct size after removeBack: "<<(removeBackSizeTest()? "PASSED":"FAILED")<<endl;
-    cout<<"Test 9: \nsize returns correct size after removeFront: "<<(removeFrontSizeTest()? "PASSED":"FAILED")<<endl;
-    cout<<"Test 10: \nsearch returns false on empty list: "<<(emptyListSearchTest()? "PASSED":"FAILED")<<endl;
-    cout<<"Test 11: \nsearch returns true when element is in list: "<<(positiveSearchTest()? "PASSED":"FAILED")<<endl;
-    cout<<"Test 12: \nsearch returns false when element is not in list: "<<(negativeSearchTest()? "PASSED":"FAILED")<<endl;
+    cout<<"****************************************************************************************************"<<endl<<endl;
+    cout<<"Test 1: \nisEmpty returns true on empty list: "<<(emptyListCheckTest()? "PASSED":"FAILED")<<endl<<endl;
+    cout<<"****************************************************************************************************"<<endl<<endl;
+    cout<<"Test 2: \nisEmpty returns false on populated list: "<<(populatedListCheckTest()? "PASSED":"FAILED")<<endl<<endl;
+    cout<<"****************************************************************************************************"<<endl<<endl;
+    cout<<"Test 3: \nsize returns 0 on empty list: "<<(emptySizeTest()? "PASSED":"FAILED")<<endl<<endl;
+    cout<<"****************************************************************************************************"<<endl<<endl;
+    cout<<"Test 4: \nsize returns correct size after single addBack: "<<(singleAddBackSizeTest()? "PASSED":"FAILED")<<endl<<endl;
+    cout<<"****************************************************************************************************"<<endl<<endl;
+    cout<<"Test 5: \nsize returns correct size after multiple addBack: "<<(addBackSizeTest()? "PASSED":"FAILED")<<endl<<endl;
+    cout<<"****************************************************************************************************"<<endl<<endl;
+    cout<<"Test 6: \nsize returns correct size after single addFront: "<<(singleAddFrontSizeTest()? "PASSED":"FAILED")<<endl<<endl;
+    cout<<"****************************************************************************************************"<<endl<<endl;
+    cout<<"Test 7: \nsize returns correct size after multiple addFront: "<<(addFrontSizeTest()? "PASSED":"FAILED")<<endl<<endl;
+    cout<<"****************************************************************************************************"<<endl<<endl;
+    cout<<"Test 8: \nsize returns correct size after removeBack: "<<(removeBackSizeTest()? "PASSED":"FAILED")<<endl<<endl;
+    cout<<"****************************************************************************************************"<<endl<<endl;
+    cout<<"Test 9: \nsize returns correct size after removeFront: "<<(removeFrontSizeTest()? "PASSED":"FAILED")<<endl<<endl;
+    cout<<"****************************************************************************************************"<<endl<<endl;
+    cout<<"Test 10: \nsearch returns false on empty list: "<<(emptyListSearchTest()? "PASSED":"FAILED")<<endl<<endl;
+    cout<<"****************************************************************************************************"<<endl<<endl;
+    cout<<"Test 11: \nsearch returns true when element is in list: "<<(positiveSearchTest()? "PASSED":"FAILED")<<endl<<endl;
+    cout<<"****************************************************************************************************"<<endl<<endl;
+    cout<<"Test 12: \nsearch returns false when element is not in list: "<<(negativeSearchTest()? "PASSED":"FAILED")<<endl<<endl;
+    cout<<"****************************************************************************************************"<<endl<<endl;
     cout<<"Test 13: \n";
-    cout<<"addBack method works: "<<(addBackTest()? "PASSED":"FAILED")<<endl;
+    cout<<"addBack method works: "<<(addBackTest()? "PASSED":"FAILED")<<endl<<endl;
+    cout<<"****************************************************************************************************"<<endl<<endl;
     cout<<"Test 14: \n";
-    cout<<"addFront method works: "<<(addFrontTest()? "PASSED":"FAILED")<<endl;
+    cout<<"addFront method works: "<<(addFrontTest()? "PASSED":"FAILED")<<endl<<endl;
+    cout<<"****************************************************************************************************"<<endl<<endl;
     cout<<"Test 15: \n";
-    cout<<"removeBack method works: "<<(removeBackTest()? "PASSED":"FAILED")<<endl;
+    cout<<"removeBack method works: "<<(removeBackTest()? "PASSED":"FAILED")<<endl<<endl;
+    cout<<"****************************************************************************************************"<<endl<<endl;
     cout<<"Test 16: \n";
-    cout<<"removeFront method works: "<<(removeFrontTest()? "PASSED":"FAILED")<<endl;
-    cout<<"Test 17: \nremoveFront returns false on empty list: "<<(emptyRemoveFrontTest()? "PASSED":"FAILED")<<endl;
-    cout<<"Test 18: \nrmeoveBack returns false on empty list: "<<(emptyRemoveBackTest()? "PASSED":"FAILED")<<endl;
+    cout<<"removeFront method works: "<<(removeFrontTest()? "PASSED":"FAILED")<<endl<<endl;
+    cout<<"****************************************************************************************************"<<endl<<endl;
+    cout<<"Test 17: \nremoveFront returns false on empty list: "<<(emptyRemoveFrontTest()? "PASSED":"FAILED")<<endl<<endl;
+    cout<<"****************************************************************************************************"<<endl<<endl;
+    cout<<"Test 18: \nrmeoveBack returns false on empty list: "<<(emptyRemoveBackTest()? "PASSED":"FAILED")<<endl<<endl;
+    cout<<"****************************************************************************************************"<<endl<<endl;
 }
